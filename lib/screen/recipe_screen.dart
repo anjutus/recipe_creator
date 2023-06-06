@@ -36,17 +36,17 @@ class _RecipeScreenState extends State<RecipeScreen> {
         }),
       );
       String responsestatus=response.statusCode.toString();
-      print('response $responsestatus');
+     // print('response $responsestatus');
       //final Map<String, dynamic> data = json.decode(response.body);
       final data = recipeDataFromJson(response.body);
-      print('data $data');
+      //print('data $data');
       final String recipeText = data.choices[0].text;
-      print('recipeText $recipeText');
+      //print('recipeText $recipeText');
       setState(() {
         _recipe = recipeText;
       });
     } catch (e) {
-      print('Error: $e');
+      //print('Error: $e');
     } finally {
       setState(() {
         _isLoading = false;
